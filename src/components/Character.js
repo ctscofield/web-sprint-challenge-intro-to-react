@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Character = props => {
     const { characterData } = props;
+    console.log(characterData);
     return (
         <div className="border">
             <h2 className="Name">{characterData.name}</h2>

@@ -1,23 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import './App.css';
-import Character from "./components/Character.js"
+import Characters from "./components/Characters.js"
+
+
+
+const NumArr = ['1', '2', '3', '4', '5', '6', '7'];
 
 
 const App = () => {
   const[characterData, setCharacter] = useState([]);
 
-  useEffect(() => {
+  function funk(number) {
     axios
-      .get("https://swapi.dev/api/people/1/")
+      .get(`https://swapi.dev/api/people/${number}/`)
       .then((res) => {
-        setCharacter(res.data)
-        console.log(res.data)
+        setCharacter(characterData =>[...characterData, res.data]);
       })
       .catch((err) => {
         console.log(err);
       })
+  }
+    
+  useEffect(() => {
+    NumArr.forEach((number) => {
+      funk(number);
+    });
+    console.log(characterData)
   },[]);
+
+
+
+  
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -28,7 +42,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <Character characterData={characterData}/>
+      <Characters characterData={characterData}/>
     </div>
   );
 }
