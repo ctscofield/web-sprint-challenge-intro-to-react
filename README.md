@@ -32,11 +32,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+   React JS is a framework for javascript that gives it a lot of nice features, it also solves Javascript fatigue. I'm thankful for react becasue last sprint was brutal having to instantiate the functions and create all the elements and fill them and put them in order but now with react its much quicker.
+
 1. Describe component state.
+
+  The component state is an object that dicates how the component behaves and what it does. Makes the components interactive.
 
 1. Describe props.
 
+  Props are to components as arguments/parameters are to functions. Meaning that what we pass in will be returned as an element that appears on screen.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+  Side effects are exzctly that, it's when a function tries to modify any variables outside of its intended body.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
